@@ -19,10 +19,14 @@ const Hero = () => {
     >
       <div className="max-w-3xl">
         <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-4">
-          Hi, I'm <span className="text-blue-600 dark:text-blue-400">John Doe</span>
+          <span className="text-blue-600 dark:text-blue-400">Girisankar G</span>
+        </h1>
+        <h1 className="text-4xl md:text-4xl font-extrabold text-gray-700 dark:text-gray-300 mb-4">
+          Computer Science Student
         </h1>
         <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8">
-          I'm a full-stack developer passionate about building web applications with great user experiences.
+          Passionate about creating innovative solutions through code. 
+            Specializing in web development, machine learning, and software engineering.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <button
