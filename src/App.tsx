@@ -5,7 +5,7 @@ import Home from './pages/Home';
 function App() {
   useEffect(() => {
     // Update document title
-    document.title = 'John Doe | Portfolio';
+    document.title = 'Portfolio';
     
     // Get the default title element
     const defaultTitleElement = document.querySelector('[data-default]');
