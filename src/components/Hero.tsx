@@ -1,12 +1,12 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 80, // Offset for fixed header
+        top: section.offsetTop - 80,
         behavior: 'smooth',
       });
     }
@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center text-center px-4 bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-800"
+      className="min-h-screen flex flex-col justify-center items-center text-center px-4 relative bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-800"
     >
       <div className="max-w-3xl">
         <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-4">
@@ -26,7 +26,7 @@ const Hero = () => {
         </h1>
         <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8">
           Passionate about creating innovative solutions through code. 
-            Specializing in web development, machine learning, and software engineering.
+          Specializing in web development, machine learning, and software engineering.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <button
@@ -44,6 +44,15 @@ const Hero = () => {
           </button>
         </div>
       </div>
+
+      {/* Down Arrow for scrolling */}
+      <button
+        onClick={() => scrollToSection('about')}
+        className="absolute bottom-6 animate-bounce text-blue-600 dark:text-blue-400"
+        aria-label="Scroll Down"
+      >
+        <ChevronDown size={32} />
+      </button>
     </section>
   );
 };
